@@ -1,9 +1,13 @@
 import React from "react"
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
-import Tabs from "./tabs/Tabs"
-import WriteContainer from "./write/WriteContainer"
+import Tabs from "./TabStack"
+import WriteContainer from "../screens/write/WriteContainer"
 
-const Stack = createNativeStackNavigator()
+export type RootStackParamList = {
+  Tabs: undefined
+  Write: undefined
+}
+const Stack = createNativeStackNavigator<RootStackParamList>()
 
 const RootStack = () => {
   return (

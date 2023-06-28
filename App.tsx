@@ -1,13 +1,9 @@
 import { NavigationContainer } from "@react-navigation/native"
 import React from "react"
-import RootStack from "./src/screens/RootStack"
+import Router from "./src/navigation/Router"
 
 function App() {
-  return (
-    <NavigationContainer>
-      <RootStack />
-    </NavigationContainer>
-  )
+  return <Router />
 }
 
 export default App

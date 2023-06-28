@@ -1,10 +1,16 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 import React from "react"
-import FeedContainer from "./feed/FeedContainer"
-import searchContainer from "./search/SearchContainer"
-import CalendarContainer from "./calendar/CalendarContainer"
+import FeedContainer from "../screens/tabs/feed/FeedContainer"
+import searchContainer from "../screens/tabs/search/SearchContainer"
+import CalendarContainer from "../screens/tabs/calendar/CalendarContainer"
 
-const Tab = createBottomTabNavigator()
+export type TabStackParamList = {
+  Feeds: undefined
+  Calendar: undefined
+  Search: undefined
+}
+
+const Tab = createBottomTabNavigator<TabStackParamList>()
 
 const Tabs = () => (
   <Tab.Navigator>
