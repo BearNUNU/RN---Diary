@@ -13,7 +13,7 @@ export type TabStackParamList = {
 const Tab = createBottomTabNavigator<TabStackParamList>()
 
 const Tabs = () => (
-  <Tab.Navigator>
+  <Tab.Navigator initialRouteName="Feeds">
     <Tab.Screen
       name="Feeds"
       component={FeedContainer}
